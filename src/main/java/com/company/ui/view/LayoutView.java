@@ -1,7 +1,6 @@
 package com.company.ui.view;
 
-import javafx.scene.control.TextField;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import lombok.Value;
 import org.springframework.stereotype.Component;
 
@@ -10,11 +9,11 @@ import javax.annotation.PostConstruct;
 @Value
 @Component
 public class LayoutView {
-    private HBox layout = new HBox();
-    private TextField urlTextField = new TextField();
+    private VBox layout = new VBox();
+    private SourceUrlView sourceUrlView;
 
     @PostConstruct
     public void init() {
-        layout.getChildren().add(urlTextField);
+        layout.getChildren().add(sourceUrlView.getLayout());
     }
 }

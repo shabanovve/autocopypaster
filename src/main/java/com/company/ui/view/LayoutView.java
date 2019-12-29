@@ -10,10 +10,10 @@ import javax.annotation.PostConstruct;
 @Component
 public class LayoutView {
     private VBox layout = new VBox();
-    private SourceUrlView sourceUrlView;
+    private ButtonLayoutView buttonLayoutView;
 
     @PostConstruct
     public void init() {
-        layout.getChildren().add(sourceUrlView.getLayout());
+        layout.getChildren().add(buttonLayoutView.getLayout());
     }
 }
